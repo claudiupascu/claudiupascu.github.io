@@ -1,4 +1,4 @@
- document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.10.29.3";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.10.29.3";
 
  document.getElementById("id_start_button").addEventListener("click", start);
 
@@ -91,5 +91,3 @@
 	my_worker.postMessage("stop");
 
  }
-
- //---------------------------------------------
