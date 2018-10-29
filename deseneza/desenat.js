@@ -59,7 +59,7 @@ document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 
 	document.getElementById("id_stop_button").disabled = false;
 
 	
-
+if (my_worker === null){
 	my_worker = new Worker("calcul_prime.js");
 
 	my_worker.onmessage = function(e){
@@ -67,8 +67,10 @@ document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 
 		document.getElementById("id_prime").innerHTML = e.data;
 
 	}
-
-	
+}
+else 
+{
+	my_worker.postMessage("start");
 
 	id_timer = setInterval(deseneaza_cerc, 10, unghi_start, context, canvas.width, canvas.height);	
 

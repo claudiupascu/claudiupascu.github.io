@@ -10,6 +10,14 @@ onmessage = function(e){
 
 	}
 
+	else
+
+		if (e.data == "start"){
+
+			stopped = false;
+
+		}
+
 }
 
 //-------------------------------------------
