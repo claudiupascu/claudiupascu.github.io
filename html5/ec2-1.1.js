@@ -1,82 +1,80 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.10.15.2";
+ document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.10.22.0";
+
+ document.getElementById("id_button").addEventListener("click", rezolva);
 
  
 
  //----------------------------------
 
- function citire()
+ function t_ec2()
 
  {
 
-	 
+	 this.citire = function()
 
-	var _a = document.getElementById("id_a").value; 
+	 {
 
-	var _b = document.getElementById("id_b").value;
+		this.a = document.getElementById("id_a").value; 
 
-	var _c = document.getElementById("id_c").value;
+		this.b = document.getElementById("id_b").value;
 
-	
+		this.c = document.getElementById("id_c").value;		
 
-	var coeficienti = {a:_a, b:_b, c:_c};
+	 }
 
-	return coeficienti; 
+	 //----------------------------------
 
- }
+	 this.rezolvare = function()
 
- //----------------------------------
+	 {
 
- function rezolvare(coeficienti)
+		var delta = this.b * this.b - 4 * this.a * this.c;
 
- {
+		var x1_re, x2_re, x1_im, x2_im;
 
-	var delta = coeficienti.b * coeficienti.b - 4 * coeficienti.a * coeficienti.c;
+			
 
-	var x1_re, x1_im, x2_re, x2_im;
+		if (delta >= 0){
 
-	if (delta >= 0){
+			x1_re = (-this.b + Math.sqrt(delta)) / (2 * this.a);
 
-		x1_re = (-coeficienti.b + Math.sqrt(delta)) / (2 * coeficienti.a);
+			x2_re = (-this.b - Math.sqrt(delta)) / (2 * this.a);
 
-		x2_re = (-coeficienti.b - Math.sqrt(delta)) / (2 * coeficienti.a);
+			x1_im = x2_im = 0;
 
-		x1_im = x2_im = 0;
+		}
 
-	}
+		else{
 
-	else{
+			x1_re = -this.b / (2 * this.a);
 
-		x1_re = -coeficienti.b / (2 * coeficienti.a);
+			x1_im = Math.sqrt(-delta) / (2 * this.a);
 
-		x1_im = Math.sqrt(-delta) / (2 * coeficienti.a);
+			x2_re = -this.b / (2 * this.a);
 
-		x2_re = -coeficienti.b / (2 * coeficienti.a);
+			x2_im = -Math.sqrt(-delta) / (2 * this.a);
 
-		x2_im = -Math.sqrt(-delta) / (2 * coeficienti.a);
+		}
 
-	}
+		
 
-	
+		this.x1 = {re: x1_re, im: x1_im};
 
-	var x1 = {re: x1_re, im: x1_im};
+		this.x2 = {re: x2_re, im: x2_im};
 
-	var x2 = {re: x2_re, im: x2_im};
+	 }
 
-	var solutii = {x1:x1, x2:x2};
+	 //----------------------------------
 
-	return solutii;
+	 this.afisare = function()
 
- }
+	 {
 
- //----------------------------------
+		document.getElementById("id_x1").innerHTML = this.x1.re + " + " + this.x1.im + "i";
 
- function afisare(solutii)
+		document.getElementById("id_x2").innerHTML = this.x2.re + " + " + this.x2.im + "i";
 
- {
-
-	document.getElementById("id_x1").innerHTML = solutii.x1.re + " + " + solutii.x1.im + "i";
-
-	document.getElementById("id_x2").innerHTML = solutii.x2.re + " + " + solutii.x2.im + "i";
+	 }
 
  }
 
@@ -86,25 +84,12 @@ document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 
 
  {
 
-	 var coeficienti = citire();
+	 var ec2 = new t_ec2();
 
-	 var solutii = rezolvare(coeficienti);
+	 ec2.citire();
 
-	 afisare(solutii);
+	 ec2.rezolvare();
+
+	 ec2.afisare();
 
  }
-
- //----------------------------------
-
-this.afisare=function()
-{
-document.getElementById("vid_x1").innerHTML=this.xi.re+ " + " + this.x1 inner
-document.getElementById
-}
-function rezolva{
-var ec2=new t_ec2();
-ec2.citire();
-ec2.rezolvare();
-ec2.afisare();
- }
-}
