@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.5";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.6";
 
 
 
@@ -72,6 +72,8 @@ function on_touch_move(e)
 
 		context.beginPath();
 
+		context.lineWidth = 20;
+
 		context.moveTo(last_pos.x - canvas_bounding_rect.left, last_pos.y - canvas_bounding_rect.top);
 
 		context.lineTo(e.changedTouches[i].pageX - canvas_bounding_rect.left, 
@@ -79,6 +81,8 @@ function on_touch_move(e)
 						e.changedTouches[i].pageY - canvas_bounding_rect.top);
 
 		
+
+		context.lineWidth = 1;
 
 		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left, 
 
@@ -99,5 +103,7 @@ function on_touch_move(e)
 	}
 
 }
+
+//-------------------------------------------
 
 //-------------------------------------------
