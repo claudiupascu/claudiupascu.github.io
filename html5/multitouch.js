@@ -119,3 +119,27 @@ function on_touch_move(e)
 }
 
 //-------------------------------------------
+
+function on_touch_end(e)
+
+{
+
+	e.preventDefault();
+
+	
+
+	for (var i = 0; i < e.changedTouches.length; i++){
+
+		var j = 0;
+
+		for (; j < pozitii.length; j++)
+
+			if (pozitii[j].id == e.changedTouches[i].identifier)
+
+				break;
+
+		pozitii.splice(j, 1);
+
+	}
+
+}
