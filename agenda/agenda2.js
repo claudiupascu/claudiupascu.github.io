@@ -59,16 +59,18 @@
 			}
 			
 			   //functia de editare eveniment
-			function edit(id_eveniment){
+			function edit(id_eveniment){				
 				evenim = evenimente[id_eveniment];
 				sterge(id_eveniment);
 				afFormular();
+              if(confirm(Modifici evenimentul?)){			
 				adauga('nume').value = evenim.nume;
 				adauga('email').value = evenim.email;
 				adauga('telefon').value = evenim.telefon;
 				adauga('data').value = evenim.data;
 				adauga('timp').value = evenim.timp;
 				adauga('evenimentul').value = evenim.evenimentul;
+			  }
 			}
 			//navigator.wakeLock.request("system").then(
 			function alarma(){
