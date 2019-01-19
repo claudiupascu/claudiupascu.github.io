@@ -47,7 +47,7 @@
 			    // functia de stergere eveniment
 			function sterge(id_eveniment){
 			   nouEvenim = new Array();
-			   //if(confirm(Modifici sau stergi evenimentul?)){
+			   if(confirm(Stergi evenimentul?)){
 			   for(i=0; i<evenimente.length; i++){
 				   if(i != id_eveniment){
 				   newEvenim[nouEvenim.length] = evenimente[i];
@@ -55,7 +55,7 @@
 			   }
 			   evenimente = nouEvenim;
 			   addEvenimente();
-			   //}
+			   }
 			}
 			
 			   //functia de editare eveniment
