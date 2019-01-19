@@ -1,13 +1,4 @@
-              //functia care permite preluarea datei in formular
-            //function SeteazaData(){
-             //   var dataa = new Date();
-             //   var ziua = dataa.getDate();
-             //   var luna = dataa.getMonth()  + 1;
-             //   var anul = dataa.getFullYear();
-             //   var zi_evenim = luna + "/" + ziua + "/" + "/" + anul;
-             //   document.getElementById('data').value = zi_evenim;
-            //}
-  			
+            //functia care defineste continutul initial si campurile de completat ale aplicatiei
 			function eveniment()
 			{
 			   this.nume = "";
