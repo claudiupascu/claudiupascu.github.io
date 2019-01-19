@@ -91,12 +91,12 @@
                    // Amplasamentul afisarii
                  document.getElementById("timp_ramas_eveniment").innerHTML = zile + "zile " + ore + "ore "
                   + minute + "min. " + secunde + "sec. ";
-                   if (diferenta < 60000 ) {                       
+                   if (diferenta < 60000 && diferenta > 1000 ) {                       
 			           window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100,1000,100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100,1000]);
 				   }
-	               if(diferenta < 0) {
-                       // clearInterval(x);
-					    //alert("Ai un eveniment in ateptare");
+	               if(diferenta<1000 && diferenta >= 0) {
+                       clearInterval(x);
+					    alert("Ai un eveniment in ateptare");
 		           // window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
 		          // document.getElementById("timp_ramas_eveniment").innerHTML = "EXPIRAT"; 		   		   
 	              // }
