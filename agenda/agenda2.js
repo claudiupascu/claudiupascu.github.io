@@ -106,7 +106,6 @@
 				 	//)						
 			   // functia de adaugare eveniment in interiorul html
 			function addEvenimente(){
-			       //alert(evenimente.length);
 			       adauga('toateEvenimentele').innerHTML = '';
 			   for(i=0; i<evenimente.length; i++){
 			           evenim = evenimente[i];				   
@@ -119,7 +118,6 @@
 				       "<button  class='w3-button w3-red' onclick='sterge("+i+")'>Sterge</button>" + "   "+
 				       "<button  class='w3-button w3-indigo' onclick='alarma()'>Set alarma</button>" + "<br/>" +
 				       "id='timp_ramas_eveniment'" + "<div>";
-				       adauga('toateEvenimentele').appendChild(div);
-			  	      //alert(new Date(evenim.data+" "+evenim.timp));                 				   
+				       adauga('toateEvenimentele').appendChild(div);                				   
 			   }
 			}
