@@ -11,6 +11,7 @@ culorilor interfetei aplicatiei si asezarea in pagina a elementelor
 	3. cand mai ramane 1 secunda pana la expirarea timpului afiseaza o alerta pop-up cu mesajul "Ai un eveniment in ateptare"
 	4. asigura modificarea continutului evenimentului a orei si datei acestuia(edit(id_eveniment))
 	5. asigura stergerea evenimenului din agenda (sterge(id_eveniment))
+	6. asigura mesaj la incercarea de a introduce campuri goale in agenda("Toate campurile sunt obligatorii").
 	
 -La conceperea aplicatiei se putea folosi node.js pentru a asigura suportul server web si fundtiile acestuia de relationare cu baza de date, 
 dar am optat pentru memorarea in ram/string pentru o sulare mai usoara si facila si eliminarea dependentei de baza de date externa.
